@@ -1,11 +1,15 @@
 body{
     background-color: rgb(228, 239, 245);
     font-family: sans-serif;
+    
+}
+img {
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
 }
 section{
     width: 80%;
     margin: 0 auto;
-    
 }
 #mainContainer{
     display: grid;
@@ -16,6 +20,8 @@ section{
 .searchContainer{
     text-align: center;
     padding-top: 50px;
+    position: sticky;
+    top: 10;
 }
 #inputBtn{
     height: 23px;
@@ -34,7 +40,6 @@ section{
     background-color: rgba(247, 71, 71, 0.87);
     color: white;
     cursor: pointer;
-    
 }
 .mealArea{
     background-color: rgb(255, 255, 255);
@@ -43,9 +48,27 @@ section{
     margin:0;
     font-size: 20px;
     border-radius: 15px 15px 8px 8px;
+}
+.mealDetailsContainer{
+    margin: 0 auto;
+    width: 450px;
+    margin-top: 30px; 
+}
+
+#notFoundContainer{
+    width: 350px;
+    margin: 0 auto;
+    font-family: sans-serif;
+    display: none;
+}
+#notFound{
+    margin-top: 200px;
+    color: gray;
     
 }
-.mealArea img {
-    width: 100%;
-    border-radius: 15px 15px 0px 0px;
-}
+
+
+
+
+
+ 
