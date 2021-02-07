@@ -13,7 +13,7 @@ document.getElementById('searchBtn').addEventListener('click', () => {
             const mealArea = document.createElement('div');
             mealArea.className = 'mealArea';
             const mealInfo = `
-            <div onClick = 'mealDetails("${meal.strMeal}") '>
+            <div onClick = 'displayMealDetails("${meal.strMeal}") '>
             <img src="${meal.strMealThumb}">
             <p>'${meal.strMeal}'</p>
             </div>
@@ -29,12 +29,16 @@ document.getElementById('searchBtn').addEventListener('click', () => {
 
 })
 
-const mealDetails = details => {
+const displayMealDetails = details => {
     const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${details}`
     console.log("second url", url)
     fetch(url)
     .then(response => response.json())
-    .then(data => console.log(data.meals))
+    .then(data => renderMealInformation(data.meals[0]))
+}
+
+const renderMealInformation = (meals) => {
+    console.log('rander information',meals)
 }
 
 
